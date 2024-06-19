@@ -16,10 +16,10 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            GameObject enemy = Instantiate(enemyList[Random.Range(0, enemyList.Length)], new Vector3(Random.Range(-4f, 4f), 0f, 20f),transform.rotation, transform.parent);
+            GameObject enemy = Instantiate(enemyList[Random.Range(0, enemyList.Length)], new Vector3(Random.Range(-4f, 4f), 0f, 10f),transform.rotation, transform.parent);
             Debug.Log(enemy);
             Debug.Log("enemy position" + enemy.transform.position);
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(2);
         }
     }
 }

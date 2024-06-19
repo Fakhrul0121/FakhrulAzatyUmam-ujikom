@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Food
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0169642a95e8fce49b967cc4543bcdd8, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0169642a95e8fce49b967cc4543bcdd8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -62,6 +66,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 0169642a95e8fce49b967cc4543bcdd8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5349020494568395041}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 0169642a95e8fce49b967cc4543bcdd8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3587451382757367779}
   m_SourcePrefab: {fileID: 100100000, guid: 0169642a95e8fce49b967cc4543bcdd8, type: 3}
 --- !u!1 &7936997892421143090 stripped
 GameObject:
@@ -108,3 +115,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodTimeout: 3
+--- !u!65 &3587451382757367779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936997892421143090}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4597009, y: 0.13234863, z: 0.55363166}
+  m_Center: {x: 0, y: 0, z: -0.0000001937151}

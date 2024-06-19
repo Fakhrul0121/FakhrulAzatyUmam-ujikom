@@ -49,7 +49,7 @@ public class LaunchFood : MonoBehaviour
     void ShootFood()
     {
         GameObject food = Instantiate(foodProjectile, transform.parent);
-        food.transform.position = transform.position;
+        food.transform.position = new Vector3(transform.position.x,1f, transform.position.z);
         food.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0f,0f,shootVelocity));
     }
 }
