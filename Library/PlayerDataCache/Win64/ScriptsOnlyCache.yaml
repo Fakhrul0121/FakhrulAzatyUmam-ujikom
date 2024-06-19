@@ -1,12 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - EnemyGotHit
     - EnemyMovement
     - EnemySpawner
     - FoodHandler
+    - GameManager
     - LaunchFood
     - PlayerMovement
     - Quit
+    - Score
     - Start
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -20,14 +23,13 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -103,9 +105,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -122,16 +130,36 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 25968}
+      Script: {instanceID: 1894}
     - Class: 114
-      Script: {instanceID: 26284}
+      Script: {instanceID: 2594}
     - Class: 114
-      Script: {instanceID: 26380}
+      Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 31784}
+      Script: {instanceID: 3222}
     - Class: 114
-      Script: {instanceID: 31788}
+      Script: {instanceID: 3502}
+    - Class: 114
+      Script: {instanceID: 4570}
+    - Class: 114
+      Script: {instanceID: 4792}
+    - Class: 114
+      Script: {instanceID: 4998}
+    - Class: 114
+      Script: {instanceID: 5198}
+    - Class: 114
+      Script: {instanceID: 5538}
+    - Class: 114
+      Script: {instanceID: 6000}
+    - Class: 114
+      Script: {instanceID: 6744}
+    - Class: 114
+      Script: {instanceID: 6906}
+    - Class: 114
+      Script: {instanceID: 7280}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
@@ -140,6 +168,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -166,6 +198,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
@@ -181,31 +215,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1574}
+      Script: {instanceID: 1600}
     - Class: 114
-      Script: {instanceID: 2150}
+      Script: {instanceID: 2178}
     - Class: 114
-      Script: {instanceID: 2566}
+      Script: {instanceID: 2594}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 3052}
+      Script: {instanceID: 3080}
     - Class: 114
-      Script: {instanceID: 4030}
+      Script: {instanceID: 4060}
     - Class: 114
-      Script: {instanceID: 4278}
+      Script: {instanceID: 4308}
     - Class: 114
-      Script: {instanceID: 4964}
+      Script: {instanceID: 4998}
     - Class: 114
-      Script: {instanceID: 5502}
+      Script: {instanceID: 5538}
     - Class: 114
-      Script: {instanceID: 5650}
+      Script: {instanceID: 5686}
     - Class: 114
-      Script: {instanceID: 5964}
+      Script: {instanceID: 6000}
     - Class: 114
-      Script: {instanceID: 41802}
+      Script: {instanceID: 6474}
     - Class: 114
-      Script: {instanceID: 41856}
+      Script: {instanceID: 6970}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -279,6 +313,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 16963ae001a573b143f017a402112930
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LaunchFood
   - hash:
       serializedVersion: 2
       Hash: b12640dfdb5966813e9dd838893e6c4a
@@ -467,6 +507,12 @@ ScriptsOnlyBuild:
     className: UnityOnTransformParentChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 7c92e27161b591629375206f22791ba5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerMovement
+  - hash:
+      serializedVersion: 2
       Hash: d41ab9b5ea92474f9c0a6937a0607ce1
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -635,6 +681,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
+      Hash: e94f97101f5f0b20b342d995b7f5063c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: 0b63f6d3335e11939ce8790b904c8691
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -681,6 +733,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 3e74e2225f23650c9c5fa0f0a245394f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EnemyMovement
   - hash:
       serializedVersion: 2
       Hash: 47ee34eb8b6021efa0289dbbb17a5a85
@@ -753,6 +811,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a82554b70aa382db313df68a5d134353
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FoodHandler
   - hash:
       serializedVersion: 2
       Hash: bf0842d88681628b29beb00b5e2ab785
@@ -875,6 +939,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: ab3ce44d15e2e2b480a1a5a37d52b736
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Quit
+  - hash:
+      serializedVersion: 2
       Hash: c4b85a67513b4f0cf7b5fb2d5ded04b0
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -947,6 +1017,12 @@ ScriptsOnlyBuild:
     className: UnityOnSubmitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 6485d6ebfb501ed39fd2e1d3ef176ff3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Score
+  - hash:
+      serializedVersion: 2
       Hash: 5ebc58ec194dd44630b25fcc270ad4af
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -959,10 +1035,22 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 006ca9819c3c4695059da1db2ef05145
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EnemyGotHit
+  - hash:
+      serializedVersion: 2
       Hash: 67272c9c30c50b68ef1ce72ac0191c57
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMoveMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 429b0aa8cf8043ee0e02ef8c51186e77
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Start
   - hash:
       serializedVersion: 2
       Hash: d0392b7f3f52d5af537ade186b4f51f1
@@ -987,6 +1075,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseOverMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 42b481845428b70d87a5876ee6c285f7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EnemySpawner
   - hash:
       serializedVersion: 2
       Hash: 2c583ad0ac85d03e8700dd05fdcb46cb
@@ -1047,48 +1141,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 7c92e27161b591629375206f22791ba5
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerMovement
-  - hash:
-      serializedVersion: 2
-      Hash: 16963ae001a573b143f017a402112930
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LaunchFood
-  - hash:
-      serializedVersion: 2
-      Hash: a82554b70aa382db313df68a5d134353
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: FoodHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 3e74e2225f23650c9c5fa0f0a245394f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: EnemyMovement
-  - hash:
-      serializedVersion: 2
-      Hash: 42b481845428b70d87a5876ee6c285f7
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: EnemySpawner
-  - hash:
-      serializedVersion: 2
-      Hash: 429b0aa8cf8043ee0e02ef8c51186e77
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Start
-  - hash:
-      serializedVersion: 2
-      Hash: ab3ce44d15e2e2b480a1a5a37d52b736
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Quit
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
